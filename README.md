@@ -11,9 +11,12 @@
 * Firstly, I manually set the PID coefficient sets {Kp_, Ki_, Kd_} = {1,0,0}, {0,1,0}, {0,0,1} to understand each one's effect took these three videos for each PID coefficient's impact by settingin like that.
 * p_error is propotional to cte (cross track eror), i_error is accumulate all ctes , d_error is derivative of cte erros
 * The total error gets = p_error_ * Kp_ + d_error_ * Kd_ + i_error_ * Ki_;
-![1st video](Kp=1.gif) shows the car is osciliating since Pk is same as current error value.
-![2nd video](Ki=1.gif) shows the car is moving in one direction since Pd is difference of error values.
-![3rd video](Kd=1.gif) shows the car is moving tangetiallly in one direction since Pi is accumulated error values.
+* Setting Kp=1. exclusively shows the car is osciliating since Pk is same as current error value.
+* Setting Ki=1. exclusively shows the car is moving in one direction since Pd is difference of error values.
+* Setting Kd=1. exclusively shows the car is moving tangetiallly in one direction since Pi is accumulated error values.
+|-----------------------|-----------------------|-----------------------|
+|![1st video](Kp=1.gif) | ![2nd video](Ki=1.gif)|![3rd video](Kd=1.gif) |
+|-----------------------|-----------------------|-----------------------|
 
 #### Caveat of PID controller
 PID controllers will calculate the error with respect to the present state, but the actuation will be performed when the vehicle is in a future state. This can  lead to instability , even cte value closes to or even hits over 1.5 at the same time steering_angle and speed value is changed to control, so that car does not fall off the road.
