@@ -14,6 +14,7 @@
 * Setting Kp=1. exclusively shows the car is osciliating since Pk is same as current error value.
 * Setting Ki=1. exclusively shows the car is moving in one direction since Pd is difference of error values.
 * Setting Kd=1. exclusively shows the car is moving tangetiallly in one direction since Pi is accumulated error values.
+|        Kp=1.          |     Ki = 1.           |        Kd=1.          |
 |-----------------------|-----------------------|-----------------------|
 |![1st video](Kp=1.gif) | ![2nd video](Ki=1.gif)|![3rd video](Kd=1.gif) |
 |-----------------------|-----------------------|-----------------------|
