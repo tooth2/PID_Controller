@@ -14,10 +14,11 @@
 * Setting Kp=1. exclusively shows the car is osciliating since Pk is same as current error value.
 * Setting Ki=1. exclusively shows the car is moving in one direction since Pd is difference of error values.
 * Setting Kd=1. exclusively shows the car is moving tangetiallly in one direction since Pi is accumulated error values.
+* Result
 |        Kp=1.          |     Ki = 1.           |        Kd=1.          |
 |-----------------------|-----------------------|-----------------------|
 |![1st video](Kp=1.gif) | ![2nd video](Ki=1.gif)|![3rd video](Kd=1.gif) |
-|-----------------------|-----------------------|-----------------------|
+
 
 #### Caveat of PID controller
 PID controllers will calculate the error with respect to the present state, but the actuation will be performed when the vehicle is in a future state. This can  lead to instability , even cte value closes to or even hits over 1.5 at the same time steering_angle and speed value is changed to control, so that car does not fall off the road.
